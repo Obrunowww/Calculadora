@@ -47,6 +47,8 @@ function Main() {
 
             case "/":
                 calculo = (+valor1) / (+valor2)
+                // mostrar apenas 2 numeros dps da virgula 
+                calculo = calculo.toFixed(2)
                 break;
             default:
                 exibirErro("Algum dos valores foi invalido")
@@ -60,7 +62,7 @@ function Main() {
 
     const adicionarACalculadora = (botão) => {
         const operadores = ['/', '*', '-', '+', '=']
-        // Esse if esta fazendo o seguinte ele ta verificando primeir se tem os 2 valors e se tem alguma operação acontecendo 
+        // Esse if esta fazendo o seguinte ele ta verificando primeiro se tem os 2 valores e se tem alguma operação acontecendo 
         //se a operação for = sem um segundo valor ele nn faz nada e se for outro ele coloca a operação desejada 
         // e o ultimo é pra filtrar erro caso coloque a operação antes do primeiro valor 
         if (operadores.includes(botão)) {

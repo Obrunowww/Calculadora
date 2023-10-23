@@ -98,7 +98,6 @@ export const Visor = styled.div`
   width: 30%;
   overflow: hidden auto;
 }
-
 `
 // Animação de quando aparece o erro
 

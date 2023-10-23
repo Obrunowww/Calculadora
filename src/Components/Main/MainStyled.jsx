@@ -88,10 +88,15 @@ export const Visor = styled.div`
 .expressão{
   font-size: 10px;
 }
- .valorDigitado{
+.valorDigitado{
   display: flex;
   width: 100%;
   justify-content: space-between;
+}
+ .valorDigitado span{
+  text-align: end;
+  width: 30%;
+  overflow: hidden auto;
 }
 
 `

@@ -2,7 +2,6 @@ import { useState } from 'react'
 import { Calculadora, MainContainer, Visor, Botões, ContainerDeErro } from './MainStyled'
 function Main() {
 
-    // Fiquei confuso de como mostrar o resultado sem bugar os valores então ficou assim 
     const [resultado, setResultado] = useState(0)
     const [primeiroValor, setPrimeiroValor] = useState(false)
     const [segundoValor, setSegundoValor] = useState(false)
@@ -86,6 +85,7 @@ function Main() {
             else if (botão != "c") {
                 setPrimeiroValor(visor + botão)
             }else{
+                    setResultado(0)
                     setPrimeiroValor(false)
                     setSegundoValor(false)
                     setOperaçãoAtual("")
@@ -101,7 +101,7 @@ function Main() {
                     <div>
                         <p className='expressão'> {primeiroValor} {operaçãoAtual} {segundoValor}</p>
                     </div>
-                    <p className='valorDigitado'>Valor digitado: <span>{visor == "" ? 0 : visor}</span></p>
+                    <p className='valorDigitado'>Valor digitado: <span>{visor == "" ? resultado : visor}</span></p>
                 </Visor>
                 <div className='botões'>
                     {botões.map((fileira, indexFileira) => (
